@@ -52,5 +52,33 @@ The RandomForest classifier is trained with:
 - **random_state**: 0
 - **Evaluation**: Accuracy score and classification report on test data (15% of dataset)
 
+---
+
+## 🧹 Cleanup (Important: Avoid AWS Costs)
+
+⚠️ **To prevent unexpected charges, clean up these AWS SageMaker resources after testing:**
+
+1. **Delete SageMaker Endpoint**
+   - AWS Console → SageMaker → Endpoints → Select endpoint → Delete
+   - This is critical as running endpoints incur hourly charges
+
+2. **Delete Endpoint Configuration**
+   - AWS Console → SageMaker → Endpoint Configurations → Select config → Delete
+
+3. **Delete Model**
+   - AWS Console → SageMaker → Models → Select model → Delete
+
+4. **Clean S3 Bucket**
+   - AWS Console → S3 → Select bucket → Delete all training/test data and artifacts
+   - Delete the bucket if created specifically for this project
+
+5. **Remove IAM Role** (if created specifically for this project)
+   - AWS Console → IAM → Roles → Select role → Delete
+
+6. **Delete CloudWatch Logs** (optional)
+   - AWS Console → CloudWatch → Logs → Delete log groups related to SageMaker
+
+---
+
 ## References
 - MLOPS Udemy course from Krish Naik
