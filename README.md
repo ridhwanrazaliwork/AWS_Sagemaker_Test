@@ -1,6 +1,6 @@
 ## AWS SageMaker Mobile Price Classification
 
-Sagemaker test (mind that this is with older v1 sagemaker)
+Sagemaker test (mind that this is with older sagemaker v1 version)
 
 ### Project Overview
 
@@ -26,6 +26,8 @@ This project builds a machine learning pipeline to classify mobile phone prices 
 - IAM role with SageMaker permissions
 - Python 3.x with dependencies in `requirements.txt`
 - S3 bucket for storing training data
+
+**WARNING (Testing only - IAM & Networking):** Use least-privilege IAM roles and scoped policies; avoid granting broad/full access in production. Also avoid deploying resources into default/public subnets for production — prefer private subnets, NAT gateway or VPC endpoints, and properly scoped security groups.
 
 ### Key Components
 
